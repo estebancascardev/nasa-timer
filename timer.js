@@ -11,9 +11,11 @@ let second = 0;
 
 m.addEventListener("input", e => { 
     NUMBER_REGEX.test(e.target.value) ? minute = e.target.value : alert("Valor incorrecto. Ingrese un número entre 0 y 60.");
+    if (minute == 60) {second = 0}
 })
 s.addEventListener("input", e => { 
     NUMBER_REGEX.test(e.target.value) ? second = e.target.value: alert("Valor incorrecto. Ingrese un número entre 0 y 60.");
+    if (minute == 60) {second = 0}
 })
 
 form.addEventListener("submit", async e =>{
