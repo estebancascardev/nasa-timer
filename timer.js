@@ -1,7 +1,8 @@
 const NUMBER_REGEX = /^(?:[0-9]|[1-5][0-9]|60)$/;
 
+const counter = document.querySelector("#counter");
 const button = document.querySelector("#submit");
-const counter = document.querySelector("p");
+const launch = document.querySelector("#launch");
 const form = document.querySelector("form");
 const m = document.querySelector("#minute");
 const s = document.querySelector("#second");
@@ -40,6 +41,7 @@ form.addEventListener("submit", async e =>{
                 counter.innerHTML = `${String(minute).padStart(2, "0")}:${String(second).padStart(2, "0")}`;
             } else{
                 counter.innerHTML = `${String(minute).padStart(2, "0")}:${String(second).padStart(2, "0")}`;
+                launch.innerHTML = "The rocket launch was successful"
                 clearInterval(intervalId);
             }
         }
